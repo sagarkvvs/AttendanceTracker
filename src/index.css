@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(220, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* SVLNS Custom Colors */
+  --svlns-primary: hsl(220, 90%, 54%);
+  --svlns-primary-dark: hsl(224, 76%, 48%);
+  --svlns-primary-light: hsl(214, 100%, 92%);
+  --svlns-success: hsl(142, 71%, 45%);
+  --svlns-success-light: hsl(142, 76%, 92%);
+  --svlns-warning: hsl(38, 92%, 50%);
+  --svlns-warning-light: hsl(43, 96%, 89%);
+  --svlns-error: hsl(0, 84%, 60%);
+  --svlns-error-light: hsl(0, 93%, 94%);
+  --svlns-slate: hsl(215, 28%, 17%);
+  --svlns-slate-light: hsl(210, 40%, 98%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(220, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .svlns-btn-primary {
+    @apply bg-[hsl(var(--svlns-primary))] text-white hover:bg-[hsl(var(--svlns-primary-dark))] transition-colors;
+  }
+
+  .svlns-btn-success {
+    @apply bg-[hsl(var(--svlns-success))] text-white hover:bg-[hsl(var(--svlns-success))] hover:opacity-90 transition-colors;
+  }
+
+  .svlns-btn-warning {
+    @apply bg-[hsl(var(--svlns-warning))] text-white hover:bg-[hsl(var(--svlns-warning))] hover:opacity-90 transition-colors;
+  }
+
+  .svlns-btn-error {
+    @apply bg-[hsl(var(--svlns-error))] text-white hover:bg-[hsl(var(--svlns-error))] hover:opacity-90 transition-colors;
+  }
+
+  .svlns-badge-success {
+    @apply bg-[hsl(var(--svlns-success-light))] text-[hsl(var(--svlns-success))] border-[hsl(var(--svlns-success))];
+  }
+
+  .svlns-badge-warning {
+    @apply bg-[hsl(var(--svlns-warning-light))] text-[hsl(var(--svlns-warning))] border-[hsl(var(--svlns-warning))];
+  }
+
+  .svlns-badge-error {
+    @apply bg-[hsl(var(--svlns-error-light))] text-[hsl(var(--svlns-error))] border-[hsl(var(--svlns-error))];
+  }
+
+  .svlns-alert-info {
+    @apply bg-[hsl(var(--svlns-primary-light))] border-[hsl(var(--svlns-primary))] text-[hsl(var(--svlns-primary-dark))];
+  }
+
+  .svlns-alert-success {
+    @apply bg-[hsl(var(--svlns-success-light))] border-[hsl(var(--svlns-success))] text-[hsl(var(--svlns-success))];
+  }
+
+  .svlns-alert-warning {
+    @apply bg-[hsl(var(--svlns-warning-light))] border-[hsl(var(--svlns-warning))] text-[hsl(var(--svlns-warning))];
+  }
+
+  .svlns-alert-error {
+    @apply bg-[hsl(var(--svlns-error-light))] border-[hsl(var(--svlns-error))] text-[hsl(var(--svlns-error))];
+  }
+}
